@@ -59,5 +59,18 @@ describe("Determine the sequence of an array of numbers: ", function() {
     });
       
   });
+
+    describe("Case for input not an array", function() {
+
+      it("should return 'input not an array' for strings e.g. 'test'", function() {
+        expect(aritGeo('test')).toEqual('input not an array');
+      });
+
+      it("should return 'input not an array' for int e.g. 5", function() {
+        expect(aritGeo(5)).toEqual('input not an array');
+      });
+        
+    });
+
 });
 

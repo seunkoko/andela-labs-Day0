@@ -35,34 +35,38 @@
 		},
 
 		aritGeo: function (arr) {
-			if (arr.length > 0) {
-				let isArithmetic = true;
-				let isGeometric = true;
-				let arithmeticDiff = arr[1] - arr[0];
-				let geometricDiff = arr[1] / arr[0];
-				
-				for (let i = 1; i < arr.length; i++) {
-					let testArithmetic = arr[i] - arr[i-1];
-					let testGeometric = arr[i] / arr[i-1];
+			if (Array.isArray(arr)) {
+				if (arr.length > 0) {
+					let isArithmetic = true;
+					let isGeometric = true;
+					let arithmeticDiff = arr[1] - arr[0];
+					let geometricDiff = arr[1] / arr[0];
 					
-					if (testArithmetic != arithmeticDiff) {
-						isArithmetic = false;
+					for (let i = 1; i < arr.length; i++) {
+						let testArithmetic = arr[i] - arr[i-1];
+						let testGeometric = arr[i] / arr[i-1];
+						
+						if (testArithmetic != arithmeticDiff) {
+							isArithmetic = false;
+						}
+						
+						if (testGeometric != geometricDiff) {
+							isGeometric = false;
+						}
 					}
 					
-					if (testGeometric != geometricDiff) {
-						isGeometric = false;
+					if (isArithmetic) {
+						return "Arithmetic";
+					} else if (isGeometric) {
+						return "Geometric";
+					} else {
+						return -1;
 					}
-				}
-				
-				if (isArithmetic) {
-					return "Arithmetic";
-				} else if (isGeometric) {
-					return "Geometric";
 				} else {
-					return -1;
+					return 0;
 				}
 			} else {
-				return 0;
-			}
+				return "input not an array";
+			}		
 		}
 	}
