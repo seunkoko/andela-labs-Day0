@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/seunkoko/andela-labs-Day0/issues"
   },
-  "homepage": "https://github.com/seunkoko/andela-labs-Day0#readme"
+  "homepage": "https://github.com/seunkoko/andela-labs-Day0#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  }
 }
