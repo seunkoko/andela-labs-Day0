@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "()\u001b[Dcontains functions findMinMax(), fizzbuzz() and aritGeo())",
   "main": "labs.js",
+  "test": "tests/",
   "directories": {
-    "test": "tests/"
+    "test": "tests"
   },
   "scripts": {
-    "test": "jasmine"
+    "test": "tests/"
   },
   "repository": {
     "type": "git",
