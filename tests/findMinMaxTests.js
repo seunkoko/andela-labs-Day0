@@ -40,7 +40,23 @@ describe('Min-Max Numbers in a List: ', function () {
     });
 
      it('should return [-9, -4] for [-4, -5, -6, -7, -8, -9]', function () {
-      expect(findMinMax( [-4, -5, -6, -7, -8, -9])).toEqual([-9, -4]);
+      expect(findMinMax([-4, -5, -6, -7, -8, -9])).toEqual([-9, -4]);
+    });
+
+  });
+
+   describe('Return the number in the list in a new list follows `[min, max]` when the array consists of both positive and negative numbers', function () {
+
+    it('should return [-2, 7] for [-1, 4, 3, -2, 5, 7]', function () {
+      expect(findMinMax([-1, 4, 3, -2, 5, 7])).toEqual([-2, 7]);
+    });
+
+     it('should return [-34, 77] for [-4, -34, 10, 77, -8, 9]', function () {
+      expect(findMinMax([-4, -34, 10, 77, -8, 9])).toEqual([-34, 77]);
+    });
+
+    it('should return [-4, 1] for [-4, -3, -2, -1, -0, 1]', function () {
+      expect(findMinMax([-4, -34, 10, 77, -8, 9])).toEqual([-34, 77]);
     });
 
   });
