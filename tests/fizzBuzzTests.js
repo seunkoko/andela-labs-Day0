@@ -37,3 +37,15 @@ describe("Fizz Buzz tests ", function() {
   });
 
 });
+
+describe("Fizz Buzz tests on negative values", function() {
+
+  it("should return -7 since it is not divisible by 3 and 5", function() {
+    expect(fizzBuzz(-7)).toBe(-7);
+  });
+
+  it("should return FizzBuzz since -15 is divisible by both 3 and 5", function() {
+    expect(fizzBuzz(-15)).toBe('FizzBuzz');
+  });
+
+});
